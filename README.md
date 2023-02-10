@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## push/pullするためのPAT更新
+PATの期限が切れると、pushやpullができなくなる（たぶん）。以下の手順でPATを更新する。
 
-Things you may want to cover:
+1. GitHubでPAT作成ページにアクセスし、PATを新規作成する。classicのトークンで、repoにチェックすればOK。
+  
+    https://github.com/settings/tokens
 
-* Ruby version
+2. 下記コマンドを実行
+      ```
+      $ git remote set-url origin https://[取得したトークン]@github.com/ogawa-tomo/books_app.git
+      ```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+参考：https://stackoverflow.com/questions/60757334/git-push-from-visual-studio-code-no-anonymous-write-access-authentication-fai
